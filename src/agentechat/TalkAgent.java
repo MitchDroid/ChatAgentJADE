@@ -22,6 +22,7 @@ import java.awt.Toolkit;
 public class TalkAgent extends GuiAgent {
 
     private ChatRoom chatRoom;
+    private boolean isSend = false;
     private static final MessageTemplate mt = MessageTemplate.MatchPerformative(ACLMessage.REQUEST);
 
     @Override
@@ -56,8 +57,7 @@ public class TalkAgent extends GuiAgent {
                     String sender = reply.getSender().getName();
                     chatRoom.taReceivedMessages.append("\n" + sender + ": " + content);
 
-                    if (sender.equalsIgnoreCase("miller@192.168.0.15:1099/JADE")) {
-
+                    if (sender.equalsIgnoreCase("miller@192.168.7.98:1099/JADE")) {
                         createReply(reply);
                     }
 
@@ -69,12 +69,11 @@ public class TalkAgent extends GuiAgent {
 
     }
 
-    public void createReply(ACLMessage reply) {       
+    public void createReply(ACLMessage reply) {
         ACLMessage response = reply.createReply();
         response.addReceiver(reply.getSender());
-        response.setContent("Quiubooo  que quiere " + reply.getSender().getLocalName());
+        response.setContent("Hola como estas " + reply.getSender().getLocalName());
         send(response);
-       
 
     }
 

@@ -101,7 +101,7 @@ public class ChatRoom extends javax.swing.JFrame {
         getContentPane().add(btnClear);
         btnClear.setBounds(220, 290, 65, 23);
 
-        comboAgente.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Seleccione agente:", "miller@192.168.0.15:1099/JADE", "karen@192.168.0.15:1099/JADE", " " }));
+        comboAgente.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Seleccione agente:", "miller@192.168.7.98:1099/JADE", "karen@192.168.7.98:1099/JADE", " " }));
         getContentPane().add(comboAgente);
         comboAgente.setBounds(100, 10, 270, 20);
 
@@ -115,6 +115,7 @@ public class ChatRoom extends javax.swing.JFrame {
         GuiEvent ge = new GuiEvent(this, SENT_TYPE);
         ge.addParameter(comboAgente.getSelectedItem());
         ge.addParameter(taMessageToSend.getText());
+        
         owner.postGuiEvent(ge);
         taMessageToSend.setText("");
     }//GEN-LAST:event_btnSendActionPerformed

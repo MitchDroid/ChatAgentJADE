@@ -143,8 +143,8 @@
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="4">
             <StringItem index="0" value="Seleccione agente:"/>
-            <StringItem index="1" value="miller@192.168.0.15:1099/JADE"/>
-            <StringItem index="2" value="karen@192.168.0.15:1099/JADE"/>
+            <StringItem index="1" value="miller@192.168.7.98:1099/JADE"/>
+            <StringItem index="2" value="karen@192.168.7.98:1099/JADE"/>
             <StringItem index="3" value=" "/>
           </StringArray>
         </Property>
